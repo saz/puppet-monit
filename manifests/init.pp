@@ -19,7 +19,7 @@ class monit {
     file { "monit-default":
         ensure  => present,
         path    => "/etc/default/monit",
-        source  => template("monit/monit.default.erb"),
+        content  => template("monit/monit.default.erb"),
         require => Package["monit"],
     }
 
