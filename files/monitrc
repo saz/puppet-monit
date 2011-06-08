@@ -212,6 +212,6 @@
 ## It is possible to include additional configuration parts from other files or
 ## directories.
 
-  include /etc/monit.d/*.rc
+  include /etc/monit/monitrc.d/*.rc
 
 
