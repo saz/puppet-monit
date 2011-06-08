@@ -1,3 +1,5 @@
+# file managed by puppet
+
 set logfile syslog facility log_daemon                       
 set mailserver <%= scope.lookupvar('monit::params::mailserver') %>
 set alert <%= scope.lookupvar('monit::params::alert') %>
