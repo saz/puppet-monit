@@ -45,7 +45,6 @@ class monit {
     }
 
     monit::config{ "global":
-        ensure  => present,
         content => template("monit/global.rc.erb"),
     }
 }
