@@ -8,4 +8,4 @@ startup=1
 
 # To change the intervals which monit should run uncomment
 # and change this variable.
-CHECK_INTERVALS=<%= scope.loopkupvar('monit::params::interval') %>
+CHECK_INTERVALS=<%= scope.lookupvar('monit::params::interval') %>
