@@ -2,7 +2,9 @@
 
 set logfile syslog facility log_daemon                       
 set mailserver <%= scope.lookupvar('monit::params::mailserver') %>
+<% if scope.lookupvar('monit::params::alert') != 'none' -%>
 set alert <%= scope.lookupvar('monit::params::alert') %>
+<% end -%>
 set mail-format { from: monit@<%= fqdn %> }
 <% if scope.lookupvar('monit::params::httpserver') == "yes" %>
 set httpd port <%= scope.lookupvar('monit::params::httpport') %> and
