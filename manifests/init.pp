@@ -12,8 +12,10 @@ class monit {
     }
 
     service { "monit":
-        ensure  => running,
-        require => [ Package["monit"], File["monitrc.d"], Monit::Config["global"] ],
+        ensure     => running,
+        hasstatus  => false,
+        hasrestart => true,
+        require    => [ Package["monit"], File["monitrc.d"], Monit::Config["global"] ],
     }
 
     file { "monit-default":
